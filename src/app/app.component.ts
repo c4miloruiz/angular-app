@@ -7,4 +7,18 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'react-app';
+  tasks = [
+    {
+      title: 'Mi Tarea',
+      completed: false
+    },
+    {
+      title: 'Mi Tarea 2',
+      completed: true
+    },
+    {
+      title: 'Mi Tarea 3',
+      completed: false
+    }
+  ] 
 }

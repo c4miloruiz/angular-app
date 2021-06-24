@@ -1,0 +1,40 @@
+<p>
+  Tipo
+  <label>
+    Video
+    <input type="radio" value="video" name="type" (change)="filter()" [(ngModel)]="filters.type">
+  </label>
+  <label>
+    Images
+    <input type="radio" value="image" name="type" (change)="filter()" [(ngModel)]="filters.type">
+  </label>
+</p>
+<p>
+  Estado
+  <label>
+    Activo
+    <input type="radio" value="active" name="state" (change)="filter()"  [(ngModel)]="filters.state">
+  </label>
+  <label>
+    Inactivo
+    <input type="radio" value="inactive" name="state" (change)="filter()" [(ngModel)]="filters.state">
+  </label>
+</p>
+<p>
+  <label>
+    Date
+    <input type="date" name="date" (change)="changeDate($event)">
+  </label>
+</p>
+<p>
+  Order
+  <span (click)="changeOrder('A-Z')">A-Z</span>
+  <span (click)="changeOrder('Z-A')">Z-A</span>
+</p>
+<!-- <input type="text" [(ngModel)]="data.name"> -->
+<button (click)="filter()">Filtar</button>
+<p>
+  <code>
+    {{ filters | json }}
+  </code>
+</p>
